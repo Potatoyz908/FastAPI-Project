@@ -12,6 +12,22 @@ fastapi = {extras = ["standard"], version = "^0.115.6"}
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.8.4"
+pytest = "^8.3.4"
+pytest-cov = "^6.0.0"
+
+[tool.ruff]
+line-length = 79
+extend-exclude = ['migrations']
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
+
+
 
 [build-system]
 requires = ["poetry-core"]
