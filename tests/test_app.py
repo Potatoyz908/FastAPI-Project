@@ -58,3 +58,9 @@ def test_update_user(client):
         'username': 'TUBALAO',
         'email': 'tubalao@test.com',
     }
+
+
+def test_delete_user(client):
+    response = client.delete('/users/1')
+
+    assert response.json() == {'message': 'User deleted successfully'}
